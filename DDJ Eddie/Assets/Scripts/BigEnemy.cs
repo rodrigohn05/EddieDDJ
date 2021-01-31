@@ -8,6 +8,7 @@ public class BigEnemy : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
     private float moveSpeed = 3f;
+    GameObject Find;
 
 
     public float stoppingDistance = 7f;
@@ -20,6 +21,8 @@ public class BigEnemy : MonoBehaviour
     
     void Update()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        
         Vector3 direction = player.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         rb.rotation = angle;

@@ -12,6 +12,11 @@ TagManager:
   - Refill
   - Pedra
   - Heart
+  - Droplet
+  - Spider
+  - door
+  - Water
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -25,8 +30,8 @@ TagManager:
   - Spikes
   - FireBall
   - Enemy
-  - 
-  - 
+  - Spider
+  - Fire
   - 
   - 
   - 

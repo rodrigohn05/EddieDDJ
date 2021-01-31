@@ -21,7 +21,7 @@ public class HeroDamage : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision){
         
-        if (time <=0 && collision.gameObject.tag == "Spikes" || time<=0 && collision.gameObject.tag == "Enemy" || time<=0 && collision.gameObject.tag == "Fireball"|| time<=0 && collision.gameObject.tag == "Lifestealer"){
+        if (time <=0 && collision.gameObject.tag == "Spikes" || time<=0 && collision.gameObject.tag == "Enemy" || time<=0 && collision.gameObject.tag == "Fireball"|| time<=0 && collision.gameObject.tag == "Lifestealer" || time<=0 && collision.gameObject.tag == "Spider"){
             takeDamage();
             time = 1;
             if (currentHealth<=0){
@@ -37,6 +37,14 @@ public class HeroDamage : MonoBehaviour
         {
             currentHealth += 1;
             hb.SetHealth(currentHealth);
+        }
+        else if(time <=0 && collider.gameObject.tag == "Fire"){
+            takeDamage();
+            time=1f;
+            if (currentHealth<=0){
+                Destroy(gameObject);
+                Debug.Log("Morreu");
+            }
         }
     }
 

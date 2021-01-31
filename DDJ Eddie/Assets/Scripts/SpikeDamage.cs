@@ -19,9 +19,20 @@ public class SpikeDamage : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision){
         
-        if (time <=0 && collision.gameObject.tag == "Spikes"){
+        if (collision.gameObject.tag == "Spikes" ){
             takeDamage();
-            time = 1;
+           // time = 1f;
+            if (currentHealth<=0){
+                Destroy(gameObject);
+                
+            }
+        }
+    }
+    
+    void OnTriggerEnter2D(Collider2D collider){
+        if (collider.gameObject.tag=="Fire"){
+            takeDamage();
+            //time=1f;
             if (currentHealth<=0){
                 Destroy(gameObject);
                 

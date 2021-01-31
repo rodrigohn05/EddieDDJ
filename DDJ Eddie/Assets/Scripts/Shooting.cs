@@ -48,5 +48,14 @@ public class Shooting : MonoBehaviour
         //Debug.Log("TRIGGER");
         wb.SetWater(time);
         }
+        else if (collision.gameObject.tag == "Droplet")
+        {
+        time += 1f;
+        if(time>=3f){
+            time = 3f;
+        }
+        //Debug.Log("TRIGGER");
+        wb.SetWater(time);
+        }
     }
 }

@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class SpiderBehaviour : MonoBehaviour
 {
-    private Vector3 target = new Vector3 (-12,8,0);
-    private Vector3 targetDown = new Vector3(-12,-8,0);
+    private Vector3 target = new Vector3 (-36.6f,10,0);
+    private Vector3 targetDown = new Vector3(-36.6f,-10,0);
     private float speed = 7f;
     private int turn = 0;
+    private SpriteRenderer sr;
     void Start()
     {
         
@@ -31,10 +32,12 @@ public class SpiderBehaviour : MonoBehaviour
         if(turn == 0)
         {
             turn = 1;
+            transform.localScale = new Vector3(1, 1, 1);            
         }
         else
         {
             turn = 0;
+            transform.localScale = new Vector3(1, -1, 1);
         }
     }
 }

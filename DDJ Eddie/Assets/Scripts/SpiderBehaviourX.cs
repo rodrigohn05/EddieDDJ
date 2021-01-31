@@ -27,10 +27,12 @@ public class SpiderBehaviourX : MonoBehaviour
         if(turn == 0)
         {
             turn = 1;
+            transform.localScale = new Vector3(1, -1, 1);
         }
         else
         {
             turn = 0;
+            transform.localScale = new Vector3(1, 1, 1);
         }
     }
 }

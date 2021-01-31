@@ -19,4 +19,9 @@ public class Water : MonoBehaviour
             GetComponent<Rigidbody2D>().AddForce(transform.right * 1);
         }
     }
+    void OnTriggerEnter2D(Collider2D collider){
+        if(collider.gameObject.tag == "Fire"){
+            Destroy(gameObject);
+    }
+}
 }
