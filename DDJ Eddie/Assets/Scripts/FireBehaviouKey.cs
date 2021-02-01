@@ -9,6 +9,7 @@ public class FireBehaviouKey : MonoBehaviour
     public GameObject prefab;
 
     public GameObject keyPrefab;
+    
     void Update(){
         
     }
