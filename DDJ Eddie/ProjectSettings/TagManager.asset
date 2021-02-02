@@ -20,6 +20,14 @@ TagManager:
   - Key1
   - Key2
   - Key3
+  - BigE1
+  - BigE2
+  - BigE3
+  - BigE4
+  - Bubble
+  - BossFire
+  - Boss
+  - MiniFire
   layers:
   - Default
   - TransparentFX
@@ -35,11 +43,11 @@ TagManager:
   - Enemy
   - Spider
   - Fire
-  - 
-  - 
-  - 
-  - 
-  - 
+  - BigEnemy
+  - BossFire
+  - Boss
+  - MiniBoss
+  - MiniFire
   - 
   - 
   - 

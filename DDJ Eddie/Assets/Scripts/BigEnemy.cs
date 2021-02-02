@@ -8,11 +8,11 @@ public class BigEnemy : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
     private float moveSpeed = 3f;
-    GameObject Find;
+    
 
 
     public float stoppingDistance = 7f;
-    public float retreatDistance = 2f;
+    public float retreatDistance = 6f;
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -53,7 +53,7 @@ public class BigEnemy : MonoBehaviour
             }
             else if(Vector2.Distance(transform.position, player.position) < retreatDistance)
             {
-                transform.position = Vector2.MoveTowards(transform.position, player.position, -moveSpeed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, -player.position, moveSpeed * Time.deltaTime);
             }
     }
 
