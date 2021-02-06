@@ -24,6 +24,12 @@ EditorBuildSettings:
     path: Assets/Scenes/BossRoom.unity
     guid: 5d0ad807337701a4998e3438317fa8b6
   - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 9686d7581bba7c74ab39d8ead717bb7a
+  - enabled: 1
+    path: Assets/Scenes/WinScene.unity
+    guid: ddc477365e975be44850c1d35305485c
+  - enabled: 1
     path: Assets/Scenes/TestScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

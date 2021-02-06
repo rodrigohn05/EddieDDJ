@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossBehaviour : MonoBehaviour
 {
-    public Transform player;
+    private Transform player;
     private Rigidbody2D rb;
     void Start()
     {

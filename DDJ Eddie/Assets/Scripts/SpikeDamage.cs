@@ -9,6 +9,12 @@ public class SpikeDamage : MonoBehaviour
     private int currentHealth;
     public HealthBar hb;
 
+    public static bool dead = false;
+
+    public GameObject keyPrefab;
+    public GameObject dropletPrefab;
+
+
     void Start(){
         currentHealth = maxHealth;
         hb.SetMaxHealth(maxHealth);
@@ -19,20 +25,40 @@ public class SpikeDamage : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision){
         
+        if (collision.gameObject.tag == "MiniFire" ){
+            takeDamage();
+            if (currentHealth<=0){
+                if(gameObject.tag=="Boss"){
+                    GameObject keyF = Instantiate(keyPrefab, transform.position, transform.rotation);
+                    dead = true;
+                }
+                Destroy(gameObject);
+                
+            }
+        }
+        if (collision.gameObject.tag == "Bomb" ){
+            takeDamageBomb();
+            if (currentHealth<=0){
+                if(gameObject.tag=="Boss"){
+                    GameObject keyF = Instantiate(keyPrefab, transform.position, transform.rotation);
+                    dead = true;
+                }
+                Destroy(gameObject);
+                
+                
+            }
+        }
         if (collision.gameObject.tag == "Spikes" ){
             takeDamage();
-           // time = 1f;
             if (currentHealth<=0){
                 Destroy(gameObject);
                 
             }
         }
     }
-    
-    void OnTriggerEnter2D(Collider2D collider){
-        if (collider.gameObject.tag=="Fire"){
+    void OnTriggerEnter2D(Collider2D collision){
+        if(collision.gameObject.tag == "Fire"){
             takeDamage();
-            //time=1f;
             if (currentHealth<=0){
                 Destroy(gameObject);
                 
@@ -43,5 +69,15 @@ public class SpikeDamage : MonoBehaviour
     void takeDamage(){
         currentHealth -= 1;
         hb.SetHealth(currentHealth);
+        if(gameObject.tag=="Boss"){
+            Instantiate(dropletPrefab, transform.position, transform.rotation);
+        }
+    }
+    void takeDamageBomb(){
+        currentHealth -= 4;
+        hb.SetHealth(currentHealth);
+        if(gameObject.tag=="Boss"){
+            Instantiate(dropletPrefab, transform.position, transform.rotation);
+        }
     }
 }

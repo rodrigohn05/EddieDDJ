@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BigEnemy : MonoBehaviour
 {
-    public Transform player;
+    private Transform player;
     private Rigidbody2D rb;
     private Vector2 movement;
     private float moveSpeed = 3f;

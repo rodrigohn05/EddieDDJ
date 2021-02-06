@@ -7,7 +7,7 @@ public class MiniBossShoot : MonoBehaviour
     public Transform firePoint;
     public GameObject firePrefab;
 
-    public float fireForce = 10f;
+    public float fireForce = 5f;
     public float tempoTotal = 2f;
 
 

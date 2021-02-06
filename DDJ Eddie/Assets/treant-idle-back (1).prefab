@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 325474647255442599}
   - component: {fileID: 325474647255442597}
   - component: {fileID: 325474647255442592}
+  - component: {fileID: 216377907694229689}
   m_Layer: 17
   m_Name: treant-idle-back (1)
-  m_TagString: Boss
+  m_TagString: MiniBoss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 325474647255442593}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.158, y: 5.816, z: 0}
-  m_LocalScale: {x: 1.3905507, y: 1.3905507, z: 1.3905507}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 325474648650996031}
   m_Father: {fileID: 0}
@@ -93,7 +94,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325474647255442593}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -148,7 +149,7 @@ MonoBehaviour:
   firePoint: {fileID: 325474648650996031}
   firePrefab: {fileID: 5920567399805097558, guid: d7f469af4bdd54e4d80ed7008eb8db6a,
     type: 3}
-  fireForce: 30
+  fireForce: 15
   tempoTotal: 2
 --- !u!114 &325474647255442592
 MonoBehaviour:
@@ -162,7 +163,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 438e12ec385578442b2a6ef2a47e9175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+--- !u!114 &216377907694229689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325474647255442593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66ef01ec3c020d4a8a73a7f9cabc569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pedra: {fileID: 3923778362390483612, guid: c3f7369316fd23b49832dde0739da6cb, type: 3}
 --- !u!1 &325474648650996024
 GameObject:
   m_ObjectHideFlags: 0

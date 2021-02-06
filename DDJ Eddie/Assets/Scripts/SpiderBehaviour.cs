@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SpiderBehaviour : MonoBehaviour
 {
-    private Vector3 target = new Vector3 (-36.6f,10,0);
-    private Vector3 targetDown = new Vector3(-36.6f,-10,0);
+    private Vector3 target = new Vector3 (-31.32f,10,0);
+    private Vector3 targetDown = new Vector3(-31.32f,-10,0);
     private float speed = 7f;
     private int turn = 0;
     private SpriteRenderer sr;

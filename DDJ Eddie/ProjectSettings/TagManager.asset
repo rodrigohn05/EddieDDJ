@@ -28,6 +28,11 @@ TagManager:
   - BossFire
   - Boss
   - MiniFire
+  - Barrier
+  - Bomb
+  - MiniBoss
+  - SpecialDoor
+  - Key4
   layers:
   - Default
   - TransparentFX
@@ -48,8 +53,8 @@ TagManager:
   - Boss
   - MiniBoss
   - MiniFire
-  - 
-  - 
+  - Barrier
+  - Bomb
   - 
   - 
   - 

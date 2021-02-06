@@ -28,7 +28,6 @@ public class Shooting : MonoBehaviour
         {
             Shoot();
         }
-
         DontDestroyOnLoad(transform.gameObject);
     }
 

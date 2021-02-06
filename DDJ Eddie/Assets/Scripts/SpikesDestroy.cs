@@ -6,7 +6,7 @@ public class SpikesDestroy : MonoBehaviour
 {
     void OnCollisionEnter2D(Collision2D collider)
     {
-    if( collider.gameObject.tag == "Spikes")
+    if( collider.gameObject.tag == "Pedra")
         {
             Destroy(gameObject);
         }

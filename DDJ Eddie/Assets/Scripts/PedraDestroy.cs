@@ -8,7 +8,7 @@ public class PedraDestroy : MonoBehaviour
    // public GameObject Enemy1;
     public GameObject Enemy2;
     //public GameObject Enemy3;
-    
+    //public static bool dead;
 
    void OnCollisionEnter2D (Collision2D collider)
     {
@@ -18,6 +18,7 @@ public class PedraDestroy : MonoBehaviour
             Destroy(gameObject);
             GameObject enemy = Instantiate(Enemy2, transform.position, transform.rotation);
         }
+        
         
     }
   /*  void SpawnEnemy(){

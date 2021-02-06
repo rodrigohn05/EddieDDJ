@@ -8,6 +8,7 @@ public class PlayerAimWeapon : MonoBehaviour
 
    private Transform aimTransform;
    private Rigidbody2D rb;
+
    private void Awake()
    {
        
