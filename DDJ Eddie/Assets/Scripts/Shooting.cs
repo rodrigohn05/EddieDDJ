@@ -1,15 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Shooting : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject waterPrefab;
     public WaterBar wb;
-    
-    
-    public float time = 3f;  
+
+    public static float time = 3f;  
     public float cd = 0f;
     public float cdTotal = 5f;
 
@@ -17,8 +17,13 @@ public class Shooting : MonoBehaviour
 
     void Start()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        if(sceneName == "TutorialRoom"){
+//            Debug.Log("yes");
         cd = Time.time;
-        wb.SetMaxWater(time);
+        wb.SetMaxWater(3f);
+        }
     }
 
     void Update()
@@ -28,6 +33,18 @@ public class Shooting : MonoBehaviour
         {
             Shoot();
         }
+
+        if(Input.GetKey(KeyCode.LeftShift) && time >0){
+            PlayerMovement.moveSpeed=10f;
+            time -=Time.deltaTime;
+            wb.SetWater(time);
+            if(time <=0 ){
+                PlayerMovement.moveSpeed=5f;
+            }
+        }
+        else {PlayerMovement.moveSpeed=5f;}
+
+
         DontDestroyOnLoad(transform.gameObject);
     }
 

@@ -22,6 +22,9 @@ public class TextKey : MonoBehaviour
 
     void Update()
     {
+        if(DeathScreen.restart==1){
+            deaths=0;
+        }
         if(kd==0){
             scorekey.text = "x " + keys;
         }

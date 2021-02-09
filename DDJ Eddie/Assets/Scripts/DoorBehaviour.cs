@@ -18,7 +18,7 @@ public class DoorBehaviour : MonoBehaviour
         
             }
         }else{
-            if(TextKey.keys==3){
+            if(TextKey.keys==4){
                 if(collider.gameObject.tag == "Player")
                 {
                     StartCoroutine(LoadScene());

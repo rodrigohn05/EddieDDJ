@@ -686,7 +686,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1270861400}
-        m_MethodName: Restart
+        m_MethodName: RestartBegin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

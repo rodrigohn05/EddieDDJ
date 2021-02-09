@@ -11,6 +11,13 @@ public class BubbleBehaviour : MonoBehaviour
 
     public static int geral=0;
 
+    public GameObject prefab;
+
+    void Start(){
+        if(GameObject.FindGameObjectWithTag("Key1")==false && PlayerMovement.key2 == 0){
+            Instantiate(prefab, transform.position, transform.rotation);
+        }
+    }
     // Update is called once per frame
     void Update()
     {

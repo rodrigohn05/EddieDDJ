@@ -10,6 +10,8 @@ public class KeyBehaviour : MonoBehaviour
     public static int key2;
     public static int key3;
     public static int key4;
+    public static int key5;
+
 
 
     void Update(){
@@ -17,6 +19,8 @@ public class KeyBehaviour : MonoBehaviour
         key2 = PlayerMovement.key2;
         key3 = PlayerMovement.key3;
         key4 = PlayerMovement.key4;
+        key5 = PlayerMovement.key5;
+
 
         if(key1 == 1 && gameObject.tag == "Key1"){
             Destroy(gameObject);
@@ -33,6 +37,11 @@ public class KeyBehaviour : MonoBehaviour
         if(key4 == 1 && gameObject.tag == "Key4"){
             Destroy(gameObject);
         }
+
+        if(key5 == 1 && gameObject.tag == "Key5"){
+            Destroy(gameObject);
+        }
+
     }
     void OnTriggerEnter2D(Collider2D collider){
         if(collider.gameObject.tag == "Player"){

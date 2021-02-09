@@ -33,6 +33,7 @@ TagManager:
   - MiniBoss
   - SpecialDoor
   - Key4
+  - Key5
   layers:
   - Default
   - TransparentFX
